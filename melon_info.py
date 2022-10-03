@@ -26,5 +26,27 @@ def print_melon_data(melons):
             if key == melon:
                 for k1, v1 in value.items():
                     print(f"{k1}: {v1}")
-
+                    
+def add_new_melon(melon_name, melon_price, seedlessness, flesh_color, 
+                  rind_color, average_weight):
+    melons[melon_name] = {"price": melon_price,"seedlessness": seedlessness, 
+                          "flesh_color": flesh_color, "rind_color": rind_color, 
+                          "average_weight": average_weight}
+    return melons
 print_melon_data(melons)
+response = input("Would you like to add a new melon to the list? Type"
+                 f"'Y' or 'N'").title()
+if response == "Y":
+    melon_name = input("What is the name of the new melon?").title()
+    melon_price = float(input("What is the price?"))
+    seedlessness = input("Is the melon seedeless? Type 'True' or" 
+                         f"'False'.").title()
+    flesh_color = input("What is the melon's flesh color?").title()
+    rind_color = input("What is the melon's rind color?").title()
+    average_weight = int(input("What is the melon's average weight?"))
+    add_new_melon(melon_name, melon_price, seedlessness, flesh_color, 
+                  rind_color, average_weight)
+    print_melon_data(melons)
+
+    
+

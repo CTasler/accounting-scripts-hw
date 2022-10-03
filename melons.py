@@ -36,4 +36,7 @@ melons = {
               "rind_color": None, "average_weight": None},  
 }
 
-    
+# print(melons)
+# melons["Watermelon"] = {"price": 2.00,"seedlessness": True, "flesh_color": None, 
+#               "rind_color": None, "average_weight": None}
+# print(melons)
