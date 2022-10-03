@@ -22,10 +22,10 @@ from melons import melons
 def print_melon_data(melons):
     for melon in melons: 
         print(melon)
-        for key, value in melons.items():
-            if key == melon:
-                for k1, v1 in value.items():
-                    print(f"{k1}: {v1}")
+        for melon_name, characteristic in melons.items():
+            if melon_name == melon:
+                for characteristic, value in characteristic.items():
+                    print(f"{characteristic}: {value}")
                     
 def add_new_melon(melon_name, melon_price, seedlessness, flesh_color, 
                   rind_color, average_weight):
@@ -47,6 +47,8 @@ if response == "Y":
     add_new_melon(melon_name, melon_price, seedlessness, flesh_color, 
                   rind_color, average_weight)
     print_melon_data(melons)
+else: 
+    print("Goodbye")
 
     
 
